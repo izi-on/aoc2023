@@ -2,15 +2,9 @@ from functools import reduce
 from collections import defaultdict, deque
 
 with open("input.txt", 'r') as f:
-    cards = f.read().split("\n")
-
-cards = list(map(lambda x: x.split(':')[1], cards))
-
+    cards = list(map(lambda x: x.split(':')[1], f.read().split("\n")))
 total = 0
-
-result = {}
 count = defaultdict(int)
-
 for i, card in enumerate(cards):
     total += count[i] + 1
     def get_count(x,y):
