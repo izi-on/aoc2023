@@ -30,6 +30,7 @@ def try_joker(hand):
         return type_strength_map[get_type(hand)]
     
     card_set = {c for c in hand if c != "J"}
+    card_set.add("A")
     max_strength = -1
     for attempt in card_set:
         for i,c in enumerate(hand):
