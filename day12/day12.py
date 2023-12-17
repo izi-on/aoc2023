@@ -39,4 +39,7 @@ def dfs(config, rules):
     return result
 
 
+inputs = list(map(lambda x: ["?".join([x[0]] * 5), x[1] * 5], inputs))
+# print(inputs)
+
 print(sum(map(lambda x: dfs(x[0] + ".", x[1]), inputs)))
